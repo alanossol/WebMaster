@@ -32,6 +32,11 @@ a:hover{
 }
 #caja{
     background-color: rgba(245, 230, 66, 0.7);
+    padding: 2mm;
+    margin-left: 5mm;
+    border: 3px solid gray;
+    border-left: dashed black;
+    border-right: dashed black;
 }
 #caja:hover{
     background-color: rgba(245, 230, 66, 0.8);
