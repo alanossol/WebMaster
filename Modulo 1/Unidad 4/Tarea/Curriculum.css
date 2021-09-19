@@ -31,5 +31,8 @@ a:hover{
     color: honeydew;
 }
 #caja{
-    background-color: yellow;
+    background-color: rgba(245, 230, 66, 0.7);
+}
+#caja:hover{
+    background-color: rgba(245, 230, 66, 0.8);
 }
