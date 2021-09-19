@@ -26,3 +26,10 @@ a{
     color: cyan;
     font-size: 5mm;
 }
+a:hover{
+    background-color: grey;
+    color: honeydew;
+}
+#caja{
+    background-color: yellow;
+}
