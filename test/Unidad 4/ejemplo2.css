@@ -1,0 +1,11 @@
+p{
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+h2{
+    background-color: chocolate;
+    color: rgb(12, 150, 100);
+    text-align: center;
+}

@@ -1,0 +1,116 @@
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Noto Sans Mono', monospace;
+
+font-family: 'Andada Pro', serif;
+*/
+
+
+.persona-datos h1{
+    /*background-color: #fa8072;*/
+    font-family: 'Oswald', sans-serif;
+    color: skyblue;
+    text-align: center;
+    background: rgb(250,128,114);
+    background: linear-gradient(90deg, rgba(250,128,114,0) 0%, rgba(255,131,117,0.8808139534883721) 11%, rgba(244,124,110,1) 26%, rgba(228,129,118,1) 46%, rgba(0,212,255,1) 86%, rgba(0,212,255,0) 100%);
+    text-shadow: 4px 2px 3px rgba(0,52,100,0.6);
+
+}
+
+.persona-datos h2{
+    font-family: 'Oswald', sans-serif;
+    color: teal;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.persona-datos img{
+    align-items: center;
+    border-radius: 50%;
+    cursor: target;
+    filter: grayscale(100%);
+    box-shadow: 10px 10px 30px;
+    background: #4bcfff;
+    border: 6px solid rgba(0,0,0,0.5);
+}
+.persona-datos img:hover{
+    filter:grayscale(50%);
+}
+
+
+p{
+    color: darkred;
+    font-family: 'Andada Pro', serif;
+    font-weight: 300;
+    text-transform:uppercase;
+}
+.remarcado{
+    color: cyan;
+    font-family: 'Andada Pro', serif;
+    font-weight: 600;
+}
+
+
+h1{
+    background-color: grey;
+    color:  green;
+    text-align: center;
+}
+
+h2{
+    
+    color: blue;
+    font-family: 'Times New Roman', Times, serif;
+}
+h3{
+    color:orangered;
+    font-style: oblique;
+}
+li{
+    color: orange;
+    font-family: 'Noto Sans Mono', monospace;
+}
+a{
+    color: cyan;
+    font-size: 5mm;
+}
+a:hover{
+    background-color: grey;
+    color: honeydew;
+}
+#caja{
+    background: rgb(255,237,213);
+background: linear-gradient(90deg, rgba(255,237,213,0.49669894366197187) 0%, rgba(255,237,213,0.75) 5%, rgba(255,237,213,0.9) 25%, rgba(255,231,198,0.9) 50%, rgba(255,237,213,0.9) 75%, rgba(255,237,213,0.75) 95%, rgba(255,237,213,0.5) 100%);
+
+    padding: 5mm;
+    
+    text-align: center;
+    margin: 0mm;
+    column-count: 3;
+    column-gap: 10mm;
+    column-rule: 2px solid gray;
+
+    border-top: 9px double rgba(0,0,0,0.5);
+border-right: 7px double rgba(0,0,0,0.5);
+border-bottom: 9px double rgba(0,0,0,0.5);
+border-left: 7px double rgba(0,0,0,0.5);
+}
+#caja:hover{
+    background-color: rgba(245, 230, 66, 0.8);
+}
+
+.icono{
+    font-size: 18px;
+    color: darkblue;
+}
+
+.rotate:before {
+    font-size: 32px;
+    display: inline-block;
+    transform:rotateY(1800deg);
+}

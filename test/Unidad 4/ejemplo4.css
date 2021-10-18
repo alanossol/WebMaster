@@ -1,0 +1,41 @@
+p{
+    color: red;
+    font-style: italic;
+}
+
+.destacados {
+    color: blue;
+}
+
+h2{
+    text-transform: uppercase;
+}
+
+#caja{
+    width: 200px;
+    height: 300px;
+    background-color: yellowgreen;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 100px;
+    
+    border: 2px dashed black;
+    text-align: center;
+    border-top: 2px solid deeppink;
+    border-bottom: 2px solid deeppink;
+}
+
+#caja:hover{
+    background-color: hotpink;
+    color: wheat;
+}
+
+a{
+    color: green;
+    font-size: 25px;
+}
+
+a:hover{
+    background-color: yellowgreen;
+    color: blue;
+}

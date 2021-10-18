@@ -1,0 +1,48 @@
+body{
+    background: white;
+}
+
+.contenedor{
+    width: 450px;
+    height: 450px;
+    background-color: white;
+    border: 2px solid black;
+
+    display: inline-flex;
+    flex-direction:column;
+    align-items: flex-end;
+
+}
+
+.item{
+    width: 150px;
+    height: 150px;
+    
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-content: center; */
+    align-items: center;
+    
+}
+
+/* #rojo{ */
+.item:nth-child(1){
+    color: white;
+    background-color: red;
+    padding:0;
+    text-align: center;
+}
+
+/* #achul{ */
+.item:nth-child(2){
+    color:white;
+    background-color: blue;
+
+}
+
+/* #velde{ */
+.item:nth-child(3){
+    color:white;
+    background-color: green;
+}
