@@ -3,7 +3,8 @@ var router = express.Router();
 var novedadesModel = require('../../models/novedadesModel');
 
 router.get('/', async function(req,res,next) {
-    var novedades;
+    try{
+        var novedades;
     if (req.query.q === undefined) {
         novedades = await novedadesModel.getNovedades();
     } else {
@@ -19,12 +20,29 @@ router.get('/', async function(req,res,next) {
         is_search: req.query.q !== undefined,
         q: req.query.q
     });
+    }catch(error) {
+        res.render('admin/novedades', {
+            layout: 'admin/layout',
+            notLogin: true,
+            isAdminNovedades: true,
+            usuario: req.session.nombre,
+            novedades,
+            is_search: req.query.q !== undefined,
+            q: req.query.q
+        });
+    }
+    
 });
 
 router.get('/eliminar/:id', async (req,res,next) => {
-    var id = req.params.id;
+    try{
+        var id = req.params.id;
     await novedadesModel.deleteNovedadById(id);
     res.redirect('/admin/novedades');
+    }catch (error){
+        res.redirect('/admin/novedades');
+    }
+    
 });
 
 
@@ -57,7 +75,8 @@ router.post('/agregar', async(req,res,next) => {
 });
 
 router.get('/modificar/:id', async (req,res,next) => {
-    var id = req.params.id;
+    try{
+        var id = req.params.id;
     console.log(req.params.id);
     var novedades = await novedadesModel.getNovedadById(id);
 
@@ -65,6 +84,11 @@ router.get('/modificar/:id', async (req,res,next) => {
         layout: 'admin/layout',
         novedades
     });
+    } catch (error)
+    {
+        res.redirect('/admin/novedades');
+    }
+    
 });
 
 router.post('/modificar/', async (req,res,next) => {

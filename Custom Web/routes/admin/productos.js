@@ -3,7 +3,8 @@ var router = express.Router();
 var productosModel = require('../../models/productosModel');
 
 router.get('/', async function(req,res,next) {
-    var productos;
+    try{
+        var productos;
     if (req.query.prodq === undefined) {
         productos = await productosModel.getProductos();
     } else {
@@ -19,19 +20,41 @@ router.get('/', async function(req,res,next) {
         is_prodSearch: req.query.prodq !== undefined,
         prodq: req.query.prodq
     });
+    }catch (error){
+        res.render('admin/productos', {
+            layout: 'admin/layout',
+            notLogin: true,
+            isAdminProductos: true,
+            usuario: req.session.nombre,
+            productos,
+            is_prodSearch: req.query.prodq !== undefined,
+            prodq: req.query.prodq
+        });
+    }
+    
 });
 
 router.get('/eliminar/:id', async (req,res,next) => {
-    var id = req.params.id;
+    try{
+        var id = req.params.id;
     await productosModel.deleteProductoById(id);
     res.redirect('/admin/productos');
+    }catch(error){
+        res.redirect('/admin/productos');
+    }
+    
 });
 
 
 router.get('/agregar', (req, res, next) => {
-    res.render('admin/productosAgregar', {
-        layout: 'admin/layout',
-    });
+    try{
+        res.render('admin/productosAgregar', {
+            layout: 'admin/layout',
+        });
+    }catch(error){
+        res.redirect('/admin/productos');
+    }
+    
 });
 
 
@@ -57,7 +80,8 @@ router.post('/agregar', async(req,res,next) => {
 });
 
 router.get('/modificar/:id', async (req,res,next) => {
-    var id = req.params.id;
+    try{
+        var id = req.params.id;
     console.log(req.params.id);
     var productos = await productosModel.getProductoById(id);
 
@@ -65,6 +89,10 @@ router.get('/modificar/:id', async (req,res,next) => {
         layout: 'admin/layout',
         productos
     });
+    }catch (error) {
+        res.redirect('/admin/productos');
+    }
+    
 });
 
 router.post('/modificar/', async (req,res,next) => {
