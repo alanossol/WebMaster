@@ -1,0 +1,76 @@
+
+.navScrollList{
+    width:90%;
+    overflow:hidden; overflow-y:scroll;
+}
+
+.demo .juego  {
+    list-style-type: none;
+    float: left;
+}
+
+.navScrollListProduct {
+    width:max-content;
+
+    padding:2em 1em 1em 1em;
+    margin: 0.5em;
+    text-align: center;
+    border-radius: 15%;
+    background-color: rgba(45, 45, 45, 1);
+    outline-color: rgba(20, 20, 20, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    transition: all 0.7s ease;
+}
+.navScrollListProduct img{
+    max-width:20vh;
+}
+
+.navScrollListProduct img {
+    display:block;
+}
+
+
+.navScrollListProduct:hover {
+    background-color: rgba(200,200,200,.5);
+    border-radius: 30%;
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+.navScrollListProduct:hover a{
+    color:black;
+}
+
+.gridProduct {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
+.productList { grid-area: 1 / 1 / 2 / 2;
+    margin:0;
+    padding: 4%;
+}
+
+
+.productActive { grid-area: 1 / 2 / 2 / 3;
+    margin:0;
+    padding: 4%;
+} 
+
+.gridProductActiveDisplay {
+    display: grid;
+    grid-template-columns: 0.25fr 2fr 1.5fr 0.25fr;
+    grid-template-rows: 0.25fr 2fr 1.5fr 0.25fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
+.productActiveDisplayImg { grid-area: 2 / 2 / 3 / 3; 
+}
+.productActiveDisplayEspecifications { grid-area: 2 / 3 / 3 / 4; 
+}
+.productActiveDisplayDescription { grid-area: 3 / 2 / 4 / 4; 
+} 

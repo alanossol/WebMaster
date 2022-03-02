@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseReseller</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/mouses.css">
+    <link rel="stylesheet" href="stylesheets/gridProd.css">
+
+</head>
+
+<body>
+    <div class="bar grid-container">
+        <header class="grid-container1 fontpremax ">
+                <img class="logo" style="width: 4vw;" src="images/logo.png" width="50" alt="LOGO">
+                <h1>mouseReseller</h1>
+        </header>
+        <nav class="">
+            <ul class="barList">
+                <li><a class="{{#if isHome}}activo{{/if}} esfericButton" href="/">Productos</a></li>
+                <li><a class="{{#if isNosotros}}activo{{/if}} esfericButton" href="/nosotros">Nosotros</a></li>
+                <li><a class="{{#if isGaleria}}activo{{/if}} esfericButton" href="/galeria">Galeria</a></li>
+                <li><a class="{{#if isNovedades}}activo{{/if}} esfericButton" href="/novedades">Novedades</a></li>
+                <li><a class="{{#if isContacto}}activo{{/if}} esfericButton" href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        {{{body}}}
+    </div>
+
+    
+
+    <footer>
+        <p>Diseñado por Alan Lorusso - &copy;año 11/11/1911</p>
+    </footer>
+
+</body>
+
+</html>

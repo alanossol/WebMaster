@@ -1,0 +1,26 @@
+<div class="container content paleta" style="min-height: 200px;margin:50px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Modificar el producto</h4>
+            <form method="post" action="/admin/productos/modificar">
+                <input type="hidden" value="{{productos.id}}" name="id">
+                <div class="mb-3">
+                    <input type="text" placeholder="Nombre" value="{{productos.nombre}}" class="form-control" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <textarea placeholder="url" class="form-control" name="url">{{productos.url}}</textarea>
+                </div>
+                <div class="mb-3">
+                    <textarea placeholder="Especificaciones" class="form-control" name="especificaciones">{{productos.especificaciones}}</textarea>
+                </div>
+                <div class="mb-3">
+                    <textarea placeholder="Descripcion" class="form-control" name="descripcion">{{productos.descripcion}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Modificar</button>
+                {{#if error}}
+                    <h5>{{message}}</h5>
+                {{/if}}
+            </form>
+        </div>
+    </div>
+</div>

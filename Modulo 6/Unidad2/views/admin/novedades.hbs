@@ -1,0 +1,53 @@
+<div class="container" style="margin-top:50px;">
+    <div class="row">
+        <p class="text-end">Hola {{usuario}}! <a class="btn btn-danger" href="/admin/login/logout">Logout<i 
+        class="fas fa-sign-out-alt"></i></a></p>
+    </div>
+    {{!-- fin fila 1 --}}
+    {{!-- inicio fila 2 --}}
+    <div class="row">
+        <div class="col-2" style="margin-top:-9px;">
+            <h2>Listado de novedades</h2>
+        </div>
+        <div class="col-10 text-end">
+            <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fas fa-plus"></i>Nuevo</a>
+        </div>
+        <div class="col-3">
+            <form class="form-inline my-2 my-lg-0" action="/admin/novedades" method="get">
+                <input type="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                {{#if is_search}}
+                    {{#unless novedades.Length}}
+                        <p class="">No se encontraron resultados para "<strong>{{q}}</strong>"</p>
+                    {{/unless}}
+                {{/if}}
+            </form>
+        </div>
+    </div>
+    {{!-- fin fila 2 --}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Subtitulo</th>
+                <th scope="col">Cuerpo</th>
+                <th scope="col" class="text-end">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each novedades}}
+            <tr>
+                <th scope="row">{{id}}</th>
+                <td>{{titulo}}</td>
+                <td>{{subtitulo}}</td>
+                <td>{{cuerpo}}</td>
+                <td class="text-end">
+                    <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary"><i class="fas fa-pencil-alt"></i> </a>
+                    <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,36 @@
+.background{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    padding-top: 0;
+    margin-top: 0;
+    background-image: url("https://media.istockphoto.com/vectors/dark-noble-background-effect-woven-abstract-texture-seamless-pattern-vector-id985350356?k=20&m=985350356&s=612x612&w=0&h=3jdc1X_lyvLo7r1Zkqxx9bhACkx7_EfoXHk2GBS6cno=");
+}
+
+.bar{
+    margin: 0;
+
+    /*height: 70px;*/
+    padding-left: 12%;
+    
+    background-color: rgb(37, 37, 37,   0.9);
+    
+
+    outline-color: rgba(0, 0, 0, 1);
+    outline-width: 0.4vh;
+    outline-style:solid;
+    
+}
+
+.content{
+    min-height: 800px;
+    background-color: rgba(36, 36, 165, 0.75);
+    margin-top: 6.5vh;
+    margin-left: 14%;
+    margin-right: 14%;
+    margin-bottom: 8%;
+    border-radius: 2%;
+    outline-color: rgb(255, 255, 255);
+    outline-width: 0.4vh;
+    outline-style:groove;
+}

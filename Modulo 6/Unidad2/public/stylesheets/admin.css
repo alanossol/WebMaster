@@ -1,0 +1,18 @@
+header{
+    text-align: center;
+}
+
+center{
+    align-content: center;
+}
+
+header h1{
+    position: static;
+
+}
+
+.loginBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

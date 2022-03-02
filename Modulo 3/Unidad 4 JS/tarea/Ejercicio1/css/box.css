@@ -1,0 +1,44 @@
+#background{
+    background-color: red;
+    padding: 100px;
+    margin: 0;
+}
+
+.rojo{
+    background-color: red;
+}
+
+.verde{
+    background-color: green;
+}
+
+.azul{
+    background-color: blue;
+}
+
+#caja1{
+    background-color: red;
+    outline-color: black;
+    outline-width: 3px;
+    outline-style: solid;
+    width: 200px;
+    height: 200px;
+}
+
+#caja2{
+    background-color: green;
+    outline-color: black;
+    outline-width: 3px;
+    outline-style: solid;
+    width: 200px;
+    height: 200px;
+}
+
+#caja3{
+    background-color: blue;
+    outline-color: black;
+    outline-width: 3px;
+    outline-style: solid;
+    width: 200px;
+    height: 200px;
+}

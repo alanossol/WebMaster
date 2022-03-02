@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/box.css">
+    <title>cajas</title>
+</head>
+<body style="margin: 0; padding: 0;">
+        <div id="background">
+        <div id="caja1">
+
+        </div>
+        &nbsp;
+        <div id="caja2">
+
+        </div>
+        &nbsp;
+        <div id="caja3">
+
+        </div>
+    </div>
+    <script>
+        var background = document.getElementById('background');
+        var caja1 = document.getElementById('caja1');
+        var caja2 = document.getElementById('caja2');
+        var caja3 = document.getElementById('caja3');
+
+        caja1.addEventListener('click', function(){
+            background.style.backgroundColor = '#FF0000';
+        });
+
+        caja2.addEventListener('click', function(){
+            background.style.backgroundColor = '#00FF00';
+        });
+
+        caja3.addEventListener('click', function(){
+            background.style.backgroundColor = '#0000FF';
+        });
+    </script>
+</body>
+</html>

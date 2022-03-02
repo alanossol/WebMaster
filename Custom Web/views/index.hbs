@@ -1,0 +1,37 @@
+<div class="holder paleta">
+    <h2>Productos</h2>
+</div>
+<main class="gridProduct paleta" style="height: 800px; padding: 1.5%;">
+    <div class="gridProductList navScrollList" style="height: 800px;">
+            <nav style="">
+                <ul class="" style="padding: 5%;">
+                    {{#each listMouse}}
+                    <a href="/{{id}}">
+                        <li class="navScrollListProduct" style="">
+                            <div>
+                                <img src="{{url}}" alt="mouse.img">
+				                <p>{{nombre}}</p>
+                            </div>
+			            </li>
+                    </a>
+                    {{/each}}
+                </ul>
+            </nav>
+    </div>
+    <div class="gridProductActive">
+        <div class="gridProductActiveDisplay">
+            <div class="productActiveDisplayImg">
+                <h4>{{selectedMouse.nombre}}</h4>
+                <img style="<!--max-height: 350px; max-width: 50vh;-->" src="{{selectedMouse.url}}" alt="Mouse.Img">
+            </div>
+            <div class="productActiveDisplayEspecifications">
+                <h5>Especificaciones</h5>
+                <p>{{selectedMouse.especificaciones}}</p>
+            </div>
+            <div class="productActiveDisplayDescription">
+                <h5>Descripcion</h5>
+                <p>{{selectedMouse.descripcion}}</p>
+                </div>
+        </div>
+    </div>
+</main>
